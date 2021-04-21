@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helpdesk Issue tracking</title>
+</head>
+<body style="background-color: rgb(248, 240, 240); color: rgb(77, 73, 73)">
+    <div class="home">
+        <h1 style="text-align: center;">Welcome to the HelpDesk Issue Tracking API </h1>
+        <hr />
+        <p>This API can be utilized to create, update, delete and return data for the End User Issue Tracking Application.</p>
+        <p>Supported methods:</p>
+        <h5>GET, POST, DELETE, PATCH</h5>
+        <section>
+            <h3>How to use:</h3>
+            <p>You can use AJAX to call the API and will receive generated json data in return.
+                 If you are using jQuery, you can use the $.ajax() function shown below to get started.</p>
+            <p>$.ajax({ <br/>
+                url: 'https://randomuser.me/api/',<br/>
+                dataType: 'json',<br/>
+                success: function(data) {<br/>
+                  console.log(data);<br/>
+                }<br/>
+              });</p>
+            <h4>Available routes</h4>
+            <p style="color: green; font-weight: bold;">FETCH ALL KNOWN ISSUES</p>
+            <p>GET: https://testbongoapi.herokuapp.com/known-issues/</p>
+           
+            <p style="color: green; font-weight: bold;">FETCH A SINGLE KNOWN ISSUE BY ID</p>
+            <p>GET: https://testbongoapi.herokuapp.com/known-issues/<span style="font-style: italic; font-weight: bolder;">:issueId</span></p>
+            
+            <p style="color: blue; font-weight: bold;">CREATE A NEW KNOWN ISSUE</p>
+            <p>POST: https://testbongoapi.herokuapp.com/known-issues/</p>
+
+            <p style="color: red; font-weight: bold;">DELETE A SPECIFIC KNOWN ISSUE</p>
+            <p>DELETE: https://testbongoapi.herokuapp.com/known-issues/<span style="font-style: italic; font-weight: bolder;">:issueId</span></p>
+        </section>
+    </div>
+    
+</body>
+</html>

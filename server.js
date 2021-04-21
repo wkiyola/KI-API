@@ -1,17 +1,22 @@
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 4400;
+const mongoose = require('mongoose');
+const usersRoute = require('./routes/users');
+const homeRoute = require('./routes/home');
+const issuesRoute = require('./routes/knownIssues');
+require('dotenv').config();
+// require('./index.html');
 
-const data = require('./data.json');
-const users = data.results;
+mongoose.connect(
+    process.env.DB_CONNECT,
+    { useNewUrlParser: true },
+    ()=> console.log('connected to db')
+);
 
-app.get('/', (req, res)=>{
-    res.json('welcome to the api');
-});
-
-app.get('/users', (req, res)=>{
-    res.json(users);
-});
+app.use('/', homeRoute);
+app.use('/users', usersRoute);
+app.use('/known-issues', issuesRoute);
 
 app.listen(port, ()=>{
     console.log(`server running on port ${port}`);
