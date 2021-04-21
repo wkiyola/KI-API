@@ -6,7 +6,6 @@ const usersRoute = require('./routes/users');
 const homeRoute = require('./routes/home');
 const issuesRoute = require('./routes/knownIssues');
 require('dotenv').config();
-// require('./index.html');
 
 mongoose.connect(
     process.env.DB_CONNECT,

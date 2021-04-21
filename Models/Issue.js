@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+//schema
 const IssueSchema = mongoose.Schema({
     symptom: {
         type: String,

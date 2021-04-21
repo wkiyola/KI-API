@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const User = require('../Models/User');
 
-//GET REQUESTS 
 
 //fetch all users in the database
 router.get('/', async (req,res)=>{

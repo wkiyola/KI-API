@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const Issue = require('../Models/Issue');
 
-//GET REQUESTS 
 
 //fetch all known issues in the database
 router.get('/', async (req,res)=>{
